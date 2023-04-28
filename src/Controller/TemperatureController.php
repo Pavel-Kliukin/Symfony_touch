@@ -21,7 +21,8 @@ function fahren(Request $request)
 
     $fahrenheit = ($temp * 9 / 5) + 32;
     $celcius = ($fahrenheit - 32) * (5 / 9);
-    return new Response($fahrenheit, $celcius);
+    $answer = 'fahr = ' . $fahrenheit . ' celcius = ' . $celcius;
+    return new Response($answer);
 }
 
 }
